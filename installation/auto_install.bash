@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-version="1.5"
+version="2.0"
 
 mkdir -p ~/.cache/get-yt-install/dev || exit 1
 
@@ -13,7 +13,7 @@ trap "cleanup > /dev/null 2>&1" SIGINT SIGHUP SIGTERM EXIT
 
 cd ~/.cache/get-yt-install/dev || exit 1
 
-if ! wget "https://github.com/yuki-bara/get-yt/archive/refs/tags/v$version.tar.gz" -P dev; then
+if ! wget "https://github.com/makkhawan-sardlah/get-yt/archive/refs/tags/v$version.tar.gz" -P dev; then
     exit 1
 fi
 
