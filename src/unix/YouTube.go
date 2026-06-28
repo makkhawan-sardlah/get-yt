@@ -28,7 +28,7 @@ func Create_file(outfile string, video *youtube.Video, format *youtube.Format, c
 		return
 	}
 	dircache := filepath.Join(cacheDir, "get-yt")
-	cachefile := filepath.Join(dircache, outfile+".zst")
+	cachefile := filepath.Join(dircache, video.ID+".zst")
 	_, err = os.Stat(cachefile)
 	filename := outfile
 	if err == nil {
