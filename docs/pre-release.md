@@ -1,6 +1,6 @@
 # pre-release
 
-[![GitHub Pre-release](https://img.shields.io/github/v/release/yuki-bara/get-yt?include_prereleases&label=pre-release&color=orange)](./docs/pre-release.md)
+[![GitHub Pre-release](https://img.shields.io/github/v/release/makkhawan-sardlah/get-yt?include_prereleases&label=pre-release&color=orange)](./docs/pre-release.md)
 
 ## Why i have pre-release?
 
