@@ -4,7 +4,7 @@
 CMD = go
 ACT = build
 NAM = get-yt
-VERSION=1.5
+VERSION=2.0
 
 build :
 	mkdir -p bin

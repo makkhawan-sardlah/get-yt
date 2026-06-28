@@ -21,16 +21,16 @@ func Check_id(id string) string {
 	return id[len(id)-11:]
 }
 
-func Create_file(file_extension string, video *youtube.Video, format *youtube.Format, client *youtube.Client) {
+func Create_file(outfile string, video *youtube.Video, format *youtube.Format, client *youtube.Client) {
 	cacheDir, err := os.UserCacheDir()
 	if err != nil {
 		fmt.Println("cache >> error: ", err)
 		return
 	}
 	dircache := filepath.Join(cacheDir, "get-yt")
-	cachefile := filepath.Join(dircache, video.ID+file_extension+".zst")
+	cachefile := filepath.Join(dircache, outfile+".zst")
 	_, err = os.Stat(cachefile)
-	filename := video.Title + file_extension
+	filename := outfile
 	if err == nil {
 		fmt.Printf("cache >> copyfile: cache/%s >> %s", cachefile, filename)
 		cache, _ := os.Open(cachefile)
@@ -55,7 +55,7 @@ func Create_file(file_extension string, video *youtube.Video, format *youtube.Fo
 		}
 		defer file.Close()
 
-		fmt.Printf("download: %s...\n", video.Title+file_extension)
+		fmt.Printf("download: %s...\n", video.Title)
 		_, err = io.Copy(file, stream)
 		if err != nil {
 			fmt.Println("download >> error: ", err)
