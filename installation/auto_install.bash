@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-version="2.0"
+version="1.5"
 
 mkdir -p ~/.cache/get-yt-install/dev || exit 1
 
